@@ -137,11 +137,8 @@ window.onload = wrap_img;
     <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#About">About </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Why-we-need-good-representations?">Why we need good representations? </a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#Feature-Engineering">Feature Engineering </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#Why-we-need-good-representations?">Why we need good representations? </a></li>
+<li class="toc-entry toc-h3"><a href="#what-if-the-representation-is-not-learnt?">what if the representation is not learnt? </a></li>
 </ul>
 </li>
 </ul><!--
@@ -174,7 +171,6 @@ window.onload = wrap_img;
 <p>Assume you are asked to write a program, that should return "True" if the input no is divisible by 2, otherwise "False". Just think how you would write it.</p>
 <p>Now if i pass the input no as a "Roman numeral" (say XXVIII representing 28) would your program still output correct result?</p>
 <p>Most of our programs struggle to interpret the representation and so may fail to give desired results. However if the input is represented as decimal integer, the output would be correct</p>
-<p>In the same way, ML algorithms would also NOT produce accurate results if the data represenation is not good.</p>
 
 </div>
 </div>
@@ -197,16 +193,39 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Feature-Engineering">
-<a class="anchor" href="#Feature-Engineering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feature Engineering<a class="anchor-link" href="#Feature-Engineering"> </a>
-</h4>
-<p>Many ML methods are not capable enough to extract meanigful representation from data .Machine learning algorithms, hence heavily dependent on the data representation</p>
+<p>In the same way, ML algorithms would also NOT produce accurate results if the data represenation is not good.</p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="what-if-the-representation-is-not-learnt?">
+<a class="anchor" href="#what-if-the-representation-is-not-learnt?" aria-hidden="true"><span class="octicon octicon-link"></span></a>what if the representation is not learnt?<a class="anchor-link" href="#what-if-the-representation-is-not-learnt?"> </a>
+</h3>
 </div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Think about classic ML algorithms like Decision trees, Random forests, Naive bayes etc. They dont learn representations from input data. All they do is map input features to output in their own way.
+Without learning representations, these algorithms rely on <b> Feature Engineering <b>&lt;/p&gt;
 
+<pre><code>Feature Engineering ensures selection of data features that are important to achieve the particular ML task.
+With feature engineering, the human knowledge about the task, especially the factors influencing/causing the tasks are passed on to the ML algorithm
+For eg. Lets take the example of IRIS flower classification task. </code></pre>
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
+
+</b></b></p>
+</div>
+</div></div>
+</div>
 
 
   </div><!-- from https://github.com/utterance/utterances -->
