@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -280,7 +280,7 @@ With feature engineering, the human knowledge about the task, especially the fac
 <ol>
 <li>
 <p>Vast Sample Space &amp; Complex relationships</p>
-<p>Think of an image Classification problem, where each pixel (across RGB channels) is a feature. With such vast sample space, classic ML models would suffer to classify. It is nearly impossible to capture the complex non linear relationships exists between input and output without learning intermediate/abstract representations</p>
+<p>Think of an image Classification problem, where each pixel (across RGB channels) is a feature taking value between 0 and 255. Sample space of Image domain is so vast that it is nearly impossible to capture the complex non linear relationships exists between input and output without learning intermediate/abstract representations</p>
 </li>
 </ol>
 
@@ -293,8 +293,8 @@ With feature engineering, the human knowledge about the task, especially the fac
 <ol>
 <li>
 <p>Condition dependence</p>
-<p>If there exist a conditional dependence between input features, the algorithms would suffer to interpret and produce correct results, without learning representations</p>
-<p>For eg: Sequence of words, Image</p>
+<p>If there exist a conditional dependence between input features, the algorithms would suffer to interpret and produce correct results, without learning representations.</p>
+<p>For eg: Image . In an image, the pixel values are highly corelated as an object in the image is created by multiple pixels.Classic ML methods would not be able to model this conditional dependence.</p>
 </li>
 </ol>
 
