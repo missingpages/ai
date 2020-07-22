@@ -262,13 +262,27 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>** 1.Generalization</p>
+<ol>
+<li>
+<p>Generalization</p>
+<p>Algorithms that donot learn representations, do not generalize beyond the scope of problem / task.</p>
+<p>For eg: Say we have trained a Random Forest algorithm to classify Iris flowers. The algorithm would be able to     classify correctly even for the data points it has not seen. That means, it is able to perform generalization within the scope of task.</p>
+<p>But the mapping or knowledge it has learnt, cannot be used for classifying other types of flowers eventhough same features are taken into consideration</p>
+</li>
+</ol>
 
-<pre><code>Algorithms that donot learn representations, do not generalize beyond the scope of problem / task.
-
-For eg: Say we have trained a Random Forest algorithm to classify Iris flowers. The algorithm would be able to     classify correctly even for the data points it has not seen. That means, it is able to perform generalization within the scope of task.
-
-But the mapping or knowledge it has learnt, cannot be used for classifying other types of flowers eventhough same features are taken into consideration</code></pre>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>
+<p>Vast Sample Space &amp; Complex relationships</p>
+<p>Think of an image Classification problem, where each pixel (across RGB channels) is a feature. With such vast sample space, classic ML models would suffer to classify. It is nearly impossible to capture the complex non linear relationships exists between input and output without learning intermediate/abstract representations</p>
+</li>
+</ol>
 
 </div>
 </div>
@@ -279,7 +293,8 @@ But the mapping or knowledge it has learnt, cannot be used for classifying other
 <ol>
 <li>
 <p>Condition dependence</p>
-<p>If there exist a conditional dependence between input features, the algorithms would suffer to</p>
+<p>If there exist a conditional dependence between input features, the algorithms would suffer to interpret and produce correct results, without learning representations</p>
+<p>For eg: Sequence of words, Image</p>
 </li>
 </ol>
 
