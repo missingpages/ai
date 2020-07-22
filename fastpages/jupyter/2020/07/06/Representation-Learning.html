@@ -138,11 +138,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#About">About </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Why-we-need-good-representations?">Why we need good representations? </a></li>
-<li class="toc-entry toc-h3"><a href="#what-if-the-representation-is-not-learnt?">what if the representation is not learnt? </a>
-<ul>
-<li class="toc-entry toc-h6"><a href="#Feature-engineering-has-certain-limitations:">Feature engineering has certain limitations: </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#what-if-the-representation-is-not-learnt?">what if the representation is not learnt? </a></li>
 </ul>
 </li>
 </ul><!--
@@ -236,9 +232,7 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h6 id="Feature-engineering-has-certain-limitations:">
-<a class="anchor" href="#Feature-engineering-has-certain-limitations:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feature engineering has certain limitations:<a class="anchor-link" href="#Feature-engineering-has-certain-limitations:"> </a>
-</h6>
+<p>Feature engineering has certain limitations:</p>
 <ul>
 <li>FE cannot be carried for a task where minimal domain knowledge exists</li>
 <li>Difficult to extract features from high dimensional, raw data eg. machine logs</li>
@@ -261,6 +255,23 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Lets look at few scenarios where classic ML methods that donot learn representations suffer -</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Generalization</p>
+<ul>
+<li>
+<p>Algorithms that donot learn representations, doesnot generalize beyond the scope of problem / task.</p>
+
+<pre><code>For eg: Say we have trained a Random Forest algorithm to classify Iris flowers. The algorithm would be able to     classify correctly even for the data points it has not seen. That means, it is able to perform generalization within the scope of task.
+
+But the mapping or knowledge it has learnt, cannot be used for classifying other types of flowers eventhough same features are taken into consideration</code></pre>
+</li>
+</ul>
 
 </div>
 </div>
