@@ -140,6 +140,12 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Why-we-need-good-representations?">Why we need good representations? </a></li>
 <li class="toc-entry toc-h3"><a href="#what-if-the-representation-is-not-learnt?">what if the representation is not learnt? </a></li>
 <li class="toc-entry toc-h3"><a href="#Deep-Learning">Deep Learning </a></li>
+<li class="toc-entry toc-h3"><a href="#How-to-evaluate-a-representation?">How to evaluate a representation? </a></li>
+<li class="toc-entry toc-h3"><a href="#What-are-the-benefits-of-learning-good-representations?">What are the benefits of learning good representations? </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Generalization">Generalization </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul><!--
@@ -247,6 +253,16 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
+<p>...feature  engineering  is  important  butlabor-intensive and highlights the weakness of current learningalgorithms:their inability to extract and organize the discrimi-native information from the data. Feature engineering is a wayto take advantage of human ingenuity and prior knowledge tocompensate  for  that  weakness    - "Representation Learning: A Review and NewPerspectives"</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Feature engineering only guarantee the important features are taken for the task. But that alone doesnot help. It is equally important to have the features represented in a meaningful way</p>
 
 </div>
@@ -265,7 +281,7 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>
-<p>Generalization</p>
+<p><strong>Generalization</strong></p>
 <p>Algorithms that donot learn representations, do not generalize beyond the scope of problem / task.</p>
 <p>For eg: Say we have trained a Random Forest algorithm to classify Iris flowers. The algorithm would be able to     classify correctly even for the data points it has not seen. That means, it is able to perform generalization within the scope of task.</p>
 <p>But the mapping or knowledge it has learnt, cannot be used for classifying other types of flowers eventhough same features are taken into consideration</p>
@@ -280,7 +296,7 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>
-<p>Vast Sample Space &amp; Complex relationships</p>
+<p><strong>Vast Sample Space &amp; Complex relationships</strong></p>
 <p>Think of an image Classification problem, where each pixel (across RGB channels) is a feature taking value between 0 and 255. Sample space of Image domain is so vast that it is nearly impossible to capture the complex non linear relationships exists between input and output without learning intermediate/abstract representations</p>
 </li>
 </ul>
@@ -293,7 +309,7 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>
-<p>Condition dependence</p>
+<p><strong>Condition dependence</strong></p>
 <p>If there exist a conditional dependence between input features, the algorithms would suffer to interpret and produce correct results, without learning representations.</p>
 <p>For eg: Images, text, audio etc</p>
 <p>Objects in images are created by combination of pixels and hence the pixel values are highly corelated.Classic ML methods would not be able to model this conditional dependence.</p>
@@ -325,11 +341,13 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We need a model that can infer meaningful structure from input data. This is where deep learning excels.
 So the term 'Representation learning' is often used in synonymous with Deep learning.</p>
+<blockquote>
 <p>Core idea behind representation learning is</p>
 <ul>
 <li>map high dimensional sample space to low dimensional latent space . The latent space is a "Representation"</li>
 <li>Learn a mapping from low dimensional latent space to actual output domain</li>
 </ul>
+</blockquote>
 
 </div>
 </div>
@@ -346,6 +364,55 @@ So the term 'Representation learning' is often used in synonymous with Deep lear
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Deep learning does the same. It learns abstract representations in series of layers. Representation in each layer is learnt from previous layer's representation. As the network goes deeper (more layers), the abstraction increases and from the representation of final layer(s), the output is inferred.Success of Deep learning is mainly due to its ability to learn representations from data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="How-to-evaluate-a-representation?">
+<a class="anchor" href="#How-to-evaluate-a-representation?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to evaluate a representation?<a class="anchor-link" href="#How-to-evaluate-a-representation?"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Few important factors that make a good representation are</p>
+<ul>
+<li>
+<p>Prior</p>
+<p>A representation should carry information about the domain</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-are-the-benefits-of-learning-good-representations?">
+<a class="anchor" href="#What-are-the-benefits-of-learning-good-representations?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are the benefits of learning good representations?<a class="anchor-link" href="#What-are-the-benefits-of-learning-good-representations?"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Generalization">
+<a class="anchor" href="#Generalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generalization<a class="anchor-link" href="#Generalization"> </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Good representation helps to achieve generalization beyond the particular task. Hence it can used for</p>
 
 </div>
 </div>
