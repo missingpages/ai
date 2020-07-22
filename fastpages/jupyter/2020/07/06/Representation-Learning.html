@@ -138,7 +138,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#About">About </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Why-we-need-good-representations?">Why we need good representations? </a></li>
-<li class="toc-entry toc-h3"><a href="#what-if-the-representation-is-not-learnt?">what if the representation is not learnt? </a></li>
+<li class="toc-entry toc-h3"><a href="#what-if-the-representation-is-not-learnt?">what if the representation is not learnt? </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Generalization">Generalization </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul><!--
@@ -262,16 +266,12 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Generalization</p>
-<ul>
-<li>
+<h4 id="Generalization">
+<a class="anchor" href="#Generalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generalization<a class="anchor-link" href="#Generalization"> </a>
+</h4>
 <p>Algorithms that donot learn representations, doesnot generalize beyond the scope of problem / task.</p>
-
-<pre><code>For eg: Say we have trained a Random Forest algorithm to classify Iris flowers. The algorithm would be able to     classify correctly even for the data points it has not seen. That means, it is able to perform generalization within the scope of task.
-
-But the mapping or knowledge it has learnt, cannot be used for classifying other types of flowers eventhough same features are taken into consideration</code></pre>
-</li>
-</ul>
+<p>For eg: Say we have trained a Random Forest algorithm to classify Iris flowers. The algorithm would be able to     classify correctly even for the data points it has not seen. That means, it is able to perform generalization within the scope of task.</p>
+<p>But the mapping or knowledge it has learnt, cannot be used for classifying other types of flowers eventhough same features are taken into consideration</p>
 
 </div>
 </div>
