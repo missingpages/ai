@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -386,12 +386,17 @@ For eg: Lets ask a graphics software to draw a fruit specifying its size, color 
 </li>
 <li>
 <p><strong>Disentanglement</strong>
-  As mentioned in the Prior section, every real world datapoint is created one or more factors. These factors may either be independent or dependent. Factors that are not sensitive to changes in other factors are independent factors. For eg: consider "Small, red, apple" .These factors (size,color and fruit) are all independent. Change in one factor doesnot influence other. Whereas lets consider diagonal in a rectangle, the diagonal coordinates are sensitive to change in height or width of rectangle. These are all dependent factors.
-<img src="/ai/images/copied_from_nb/my_icons/image10.png" alt=""></p>
+  As mentioned in the Prior section, every real world datapoint is created one or more factors,called <em>Generative factors</em>. These factors may either be independent or dependent. Factors that are not sensitive to changes in other factors are independent factors. For eg: consider "Small, red, apple" .These factors (size,color and fruit) are all independent. Change in one factor doesnot influence other. Whereas lets consider diagonal in a rectangle, the diagonal coordinates are sensitive to change in height or width of rectangle. These are all dependent factors.
+<img src="/ai/images/copied_from_nb/my_icons/image10.png" alt="">
+  In representation learning(usually in DL)  high dimensional data points(say, images) are modeled in low dimensional latent space, which we call it as <em>Representations</em> or <em>Latent representations</em>. Each of these representations (say,100d vector) are composed of many factors, we call it as 'Latent factors'(ref the above fig).If the representation has learnt the underlying factors from the data, then one or more latent factors are mapped/related to generative factors. In that case, the latent factors representing independent generative factors should remain disentangled with other generative factors.
+  For eg: this time we generate another image a "big red apple" (<em>generative factors</em>: size: big, color: red, fruit: apple) and feed into a DL to learn a representation. Now, the latent factor(s) sensitive to the generative factor(size) only should change and the other latent factors related to other generative factors (color, fruit) should not change as the Color and fruit still remains the same (still its a red apple, only size has changed)
+  Achieving this type of disentanglement in latent space is the key to achieve human like intelligence.
+<img src="/ai/images/copied_from_nb/my_icons/image11.png" alt=""></p>
 </li>
-</ul>
-<ul>
-<li><strong>Interpretability</strong></li>
+<li>
+<p><strong>Interpretability</strong>
+As mentioned in the above</p>
+</li>
 </ul>
 
 </div>
