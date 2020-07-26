@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -393,22 +393,23 @@ So the term 'Representation learning' is often used in synonymous with Deep lear
 <p>Few important factors that make a good representation are</p>
 <ul>
 <li>
-<p>Prior</p>
+<p><strong>Prior</strong></p>
 <p>A representation should carry information about the real world factors. In other words, the representation should reveal the underlying factors used to construct the data point.
 For eg: Lets ask a graphics software to draw a fruit specifying its size, color and what fruit it is. we specify it as "small, red, apple". The software creates a nice image. It is then fed into a ML algorithm to learn represenations from the image. There are many ways that an algorithm could learn representations. As long as the representations reveal few or more underlying factors that formed the image (in this case - size,color and fruit), it would be helpful to achieve a vaierty of tasks
 <img src="/ai/images/copied_from_nb/my_icons/image8.jpg" alt=""></p>
 </li>
 <li>
-<p>Abstraction
-  The representations should derive an abstract sense from the image. This is what human mind do.
-  Human mind forms abstract concepts</p>
+<p><strong>Abstraction</strong>
+  Human beings can learn a new concept with just couple of examples. Even a 3yr old kid could easily distinguish a car from bicycle, after seeing couple of instances. whereas ML models require hundreds or thousands of examples to understand a concept. One reason why human beings learn any concept quickly because, human mind learns rich abstract concepts(representations) from visual perception. In rough sense, a car is interpreted as a collection of abstract concepts such as wheels,engine,seats etc. These abstract representations help humans towards - action, imagination, and explanation</p>
+<p>In a similar way, ML models also should learn abstract representations from the data points. These abstract representations would help to build a more robust AI solution as these abstract concepts can be combined hierarchially to represent high abstract concepts(2-wheeler/4-wheeler).</p>
+<p>Just like humans, these represenations are helpful for subsequent ML models to take action(eg.classification), form imagination(eg.Generative modeling) and create explanation(Interpretability)</p>
 </li>
-<li>
-<p>Disentanglement</p>
-</li>
-<li>
-<p>Interpretability</p>
-</li>
+</ul>
+<ul>
+<li>Disentanglement</li>
+</ul>
+<ul>
+<li>Interpretability</li>
 </ul>
 
 </div>
