@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -354,6 +354,9 @@ So the term 'Representation learning' is often used in synonymous with Deep lear
 <h3 id="Are-the-problems-of-ML-Solved?">
 <a class="anchor" href="#Are-the-problems-of-ML-Solved?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Are the problems of ML Solved?<a class="anchor-link" href="#Are-the-problems-of-ML-Solved?"> </a>
 </h3>
+<p>Though Deep Learning has solved many complex problems, there exists some key issue to be addressed :
+Data Hungry : Deep</p>
+
 </div>
 </div>
 </div>
@@ -395,7 +398,24 @@ For eg: Lets ask a graphics software to draw a fruit specifying its size, color 
 </li>
 <li>
 <p><strong>Interpretability</strong>
-As mentioned in the above</p>
+Though representations in low dimensional latent space are helpful to solve problems, interpreting them is often very hard. Disentangling the latent factors is one way to achieve interpretability.</p>
+</li>
+<li>
+<p>For eg: Take two images (small red apple &amp; big red apple) and feed into DL model to learn representation of both. Assuming the model has produced disentangled representation, we can find which units of latent vector Z are sensitive to changes in SIZE (small to red) by observing the difference between both. only the units that are sensitive to SIZE would be different in values(i.e have high variance) rest all units have minor or no changes.</p>
+</li>
+<li>
+<p>In the same way, each set of latent factors that are sensitive to each generative factors can be found.</p>
+</li>
+<li>
+<p>This interpretation offers us 2 benefits</p>
+<ul>
+<li>
+<p>Solution simplification : Assume we need to find the red colored objects from images.If we know ehich hidden units are sensitive to color changes, the task can be solved with simple linear classifier</p>
+</li>
+<li>
+<p>Targeted generation/modification : In the same way ,if we need to change the color of an object, we can just change the value of the hidden unit(sensitive to color) and then use the representation(z vector) to generate image</p>
+</li>
+</ul>
 </li>
 </ul>
 
