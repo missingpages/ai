@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -140,6 +140,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Why-we-need-good-representations?">Why we need good representations? </a></li>
 <li class="toc-entry toc-h3"><a href="#what-if-the-representation-is-not-learnt?">what if the representation is not learnt? </a></li>
 <li class="toc-entry toc-h3"><a href="#Deep-Learning">Deep Learning </a></li>
+<li class="toc-entry toc-h3"><a href="#Are-the-problems-of-ML-Solved?">Are the problems of ML Solved? </a></li>
 <li class="toc-entry toc-h3"><a href="#How-to-evaluate-a-representation?">How to evaluate a representation? </a></li>
 <li class="toc-entry toc-h3"><a href="#What-are-the-benefits-of-learning-good-representations?">What are the benefits of learning good representations? </a>
 <ul>
@@ -283,7 +284,7 @@ With feature engineering, the human knowledge about the task, especially the fac
 <li>
 <p><strong>Generalization</strong></p>
 <p>Algorithms that donot learn representations, do not generalize beyond the scope of problem / task.</p>
-<p>For eg: Say we have trained a Random Forest algorithm to classify Iris flowers. The algorithm would be able to     classify correctly even for the data points it has not seen. That means, it is able to perform generalization within the scope of task.</p>
+<p>For eg: Say we have trained a Random Forest algorithm to classify Iris flowers. The algorithm would be able to     classify correctly even for the data points it has not seen. That means, it is able to perform (local) generalization within the scope of task.</p>
 <p>But the mapping or knowledge it has learnt, cannot be used for classifying other types of flowers eventhough same features are taken into consideration</p>
 </li>
 </ul>
@@ -309,7 +310,7 @@ With feature engineering, the human knowledge about the task, especially the fac
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>
-<p><strong>Condition dependence</strong></p>
+<p><strong>Conditional dependence</strong></p>
 <p>If there exist a conditional dependence between input features, the algorithms would suffer to interpret and produce correct results, without learning representations.</p>
 <p>For eg: Images, text, audio etc</p>
 <p>Objects in images are created by combination of pixels and hence the pixel values are highly corelated.Classic ML methods would not be able to model this conditional dependence.</p>
@@ -371,6 +372,15 @@ So the term 'Representation learning' is often used in synonymous with Deep lear
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Are-the-problems-of-ML-Solved?">
+<a class="anchor" href="#Are-the-problems-of-ML-Solved?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Are the problems of ML Solved?<a class="anchor-link" href="#Are-the-problems-of-ML-Solved?"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="How-to-evaluate-a-representation?">
 <a class="anchor" href="#How-to-evaluate-a-representation?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to evaluate a representation?<a class="anchor-link" href="#How-to-evaluate-a-representation?"> </a>
 </h3>
@@ -384,7 +394,20 @@ So the term 'Representation learning' is often used in synonymous with Deep lear
 <ul>
 <li>
 <p>Prior</p>
-<p>A representation should carry information about the domain</p>
+<p>A representation should carry information about the real world factors. In other words, the representation should reveal the underlying factors used to construct the data point.
+For eg: Lets ask a graphics software to draw a fruit specifying its size, color and what fruit it is. we specify it as "small, red, apple". The software creates a nice image. It is then fed into a ML algorithm to learn represenations from the image. There are many ways that an algorithm could learn representations. As long as the representations reveal few or more underlying factors that formed the image (in this case - size,color and fruit), it would be helpful to achieve a vaierty of tasks
+<img src="/ai/images/copied_from_nb/my_icons/image8.jpg" alt=""></p>
+</li>
+<li>
+<p>Abstraction
+  The representations should derive an abstract sense from the image. This is what human mind do.
+  Human mind forms abstract concepts</p>
+</li>
+<li>
+<p>Disentanglement</p>
+</li>
+<li>
+<p>Interpretability</p>
 </li>
 </ul>
 
@@ -397,6 +420,21 @@ So the term 'Representation learning' is often used in synonymous with Deep lear
 <h3 id="What-are-the-benefits-of-learning-good-representations?">
 <a class="anchor" href="#What-are-the-benefits-of-learning-good-representations?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are the benefits of learning good representations?<a class="anchor-link" href="#What-are-the-benefits-of-learning-good-representations?"> </a>
 </h3>
+<ul>
+<li>
+<p>Transfer learning</p>
+</li>
+<li>
+<p>Multitask learning</p>
+</li>
+<li>
+<p>Simple Robust models</p>
+</li>
+<li>
+<p>Domain adaption</p>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
