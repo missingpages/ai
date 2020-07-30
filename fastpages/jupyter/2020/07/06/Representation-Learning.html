@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      9 min read
     
 </span></p>
 
@@ -119,13 +119,9 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Why-we-need-good-representations?">Why we need good representations? </a></li>
 <li class="toc-entry toc-h3"><a href="#what-if-the-representation-is-not-learnt?">what if the representation is not learnt? </a></li>
 <li class="toc-entry toc-h3"><a href="#Deep-Learning">Deep Learning </a></li>
-<li class="toc-entry toc-h3"><a href="#Are-the-problems-of-ML-Solved?">Are the problems of ML Solved? </a></li>
+<li class="toc-entry toc-h3"><a href="#Does-the-representation-learning-is-enough?">Does the representation learning is enough? </a></li>
 <li class="toc-entry toc-h3"><a href="#How-to-evaluate-a-representation?">How to evaluate a representation? </a></li>
-<li class="toc-entry toc-h3"><a href="#What-are-the-benefits-of-learning-good-representations?">What are the benefits of learning good representations? </a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#Generalization">Generalization </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h3"><a href="#What-are-the-benefits-of-learning-good-representations?">What are the benefits of learning good representations? </a></li>
 </ul>
 </li>
 </ul><!--
@@ -351,11 +347,21 @@ So the term 'Representation learning' is often used in synonymous with Deep lear
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Are-the-problems-of-ML-Solved?">
-<a class="anchor" href="#Are-the-problems-of-ML-Solved?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Are the problems of ML Solved?<a class="anchor-link" href="#Are-the-problems-of-ML-Solved?"> </a>
+<h3 id="Does-the-representation-learning-is-enough?">
+<a class="anchor" href="#Does-the-representation-learning-is-enough?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Does the representation learning is enough?<a class="anchor-link" href="#Does-the-representation-learning-is-enough?"> </a>
 </h3>
-<p>Though Deep Learning has solved many complex problems, there exists some key issue to be addressed :
-Data Hungry : Deep</p>
+<ul>
+<li>
+<p><em>Data Hungry</em> : Deep Learning models require thousands of data samples to learn and generalize the concepts learnt.Inadequate data samples lead to poor generalization.</p>
+</li>
+<li>
+<p><em>Robust</em> : Many deep learning models are not immune to adversarial attacks/change in data. Even minor changes in input may collapse the model's prediction.An example, where a stop signal with few stickers pasted over it, was misinterpreted as Speed Limit sign.</p>
+</li>
+<li>
+<p><em>Transfer Learning</em> : Though representations leant for one task are helpful for other task, it is not always effective. sometimes,the model trained on a particular domain may fail if deployed on another domain though the task is same.</p>
+</li>
+</ul>
+<p>Learning flexible generalized representations from data is the key to solve these problems</p>
 
 </div>
 </div>
@@ -430,16 +436,18 @@ Though representations in low dimensional latent space are helpful to solve prob
 </h3>
 <ul>
 <li>
-<p>Transfer learning</p>
-</li>
-<li>
 <p>Multitask learning</p>
+<p>Once the representations are learnt, multiple tasks can be achieved from the same representation by having a task specific model on top of the learnt representations
+<img src="/ai/images/copied_from_nb/my_icons/image12.png" alt=""></p>
 </li>
 <li>
 <p>Simple Robust models</p>
+<p>A good representation captures majority of factors and hence a simple(even linear) model can do the classification/prediction from the representation</p>
 </li>
 <li>
 <p>Domain adaption</p>
+<p>As the representations are generalized, it can be embraced for other domains as well.
+  For eg: representations learnt from Product review can even embraced for movie review</p>
 </li>
 </ul>
 
@@ -449,16 +457,7 @@ Though representations in low dimensional latent space are helpful to solve prob
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Generalization">
-<a class="anchor" href="#Generalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generalization<a class="anchor-link" href="#Generalization"> </a>
-</h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Good representation helps to achieve generalization beyond the particular task. Hence it can used for</p>
+<p>One way to achieve a good representation learning is to harness the power of unsupervised models and availability of loads of unlabeled dataset to learn meaningful representations and then use the concepts/representations for another task in same or different domain where the data is scarce.</p>
 
 </div>
 </div>
