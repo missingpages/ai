@@ -6,5 +6,5 @@ COPY . .
 
 # Pre-load all gems into the environment
 RUN chmod -R 777 .
-RUN gem update --system 3.2.3 && gem install bundler -v 2.4.22
+RUN gem install bundler 
 RUN jekyll build
