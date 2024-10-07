@@ -2,8 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/welcome/index.html",
-      "/posts/FlashPost - Counting LLM tokens/2024-10-06-FlashNote-TokenCounting.html"
+      "/posts/FlashPost - Counting LLM tokens/2024-10-06-FlashNote-TokenCounting.html",
+      "/posts/welcome/index.html"
     ]
   }
 ]
